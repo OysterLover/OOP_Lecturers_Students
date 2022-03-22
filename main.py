@@ -10,8 +10,7 @@ class Student:
 
     #функция для проставления оценок лекторам за курсы
     def rate_lect(self, lecturer, course, grade):
-        if isinstance(lecturer,
-                      Lecturer) and course in self.courses_in_progress and course in lecturer.courses_attached:
+        if isinstance(lecturer, Lecturer) and course in self.courses_in_progress and course in lecturer.courses_attached:
             if course in lecturer.grades:
                 lecturer.grades[course] += [grade]
             else:
